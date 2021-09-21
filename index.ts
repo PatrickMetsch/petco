@@ -65,6 +65,10 @@ app.get('/question/3', (req, res) => {
 	res.send(`<pre>${jsonString({"s.products": s.products})}</pre>`)
 })
 
+app.get('/', (req, res) => {
+	res.redirect('/question/1')
+})
+
 app.listen(port, () => {
 	console.log(`Example app listening at http://localhost:${port}`)
 })
